@@ -1,29 +1,31 @@
 import React from "react"
+import {Link} from "react-router-dom";
 
 
-function NavBar({selected}) {
+function NavBar() {
 
     
     return(
         <nav>
             <ul>
                 <li>
-                    <a html="#main">
-                        <p>Tacos</p>
-                        <p>El Rojo</p>
-                    </a>
+                    <Link to="/">
+                        <span>Tacos</span>
+                        <span>El Rojo</span>
+                    </Link>
                 </li>
                 <li>
-                    MENU
+                    <Link to="/menu">MENU</Link>
+                    
                 </li>
                 <li>
-                    CONTACT
+                    <Link to="/contact">CONTACT</Link>
                 </li>
                 <li>
-                    EVENTS
+                    <Link to="/events">EVENTS</Link>
                 </li>
                 <li>
-                    MERCH
+                    <Link to="/merch">MERCH</Link>
                 </li>
             </ul>
         </nav>
