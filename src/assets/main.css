@@ -6048,6 +6048,14 @@ video {
   font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
+.font-nono {
+  font-family: Noto Sans, sans-serif;
+}
+
+.font-lobster {
+  font-family: Lobster, cursive;
+}
+
 .font-hairline {
   font-weight: 100;
 }
@@ -6282,6 +6290,10 @@ video {
 
 .text-6xl {
   font-size: 4rem;
+}
+
+.text-7xl {
+  font-size: 7rem;
 }
 
 .leading-3 {
@@ -19786,6 +19798,14 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .sm\:font-nono {
+    font-family: Noto Sans, sans-serif;
+  }
+
+  .sm\:font-lobster {
+    font-family: Lobster, cursive;
+  }
+
   .sm\:font-hairline {
     font-weight: 100;
   }
@@ -20020,6 +20040,10 @@ video {
 
   .sm\:text-6xl {
     font-size: 4rem;
+  }
+
+  .sm\:text-7xl {
+    font-size: 7rem;
   }
 
   .sm\:leading-3 {
@@ -33525,6 +33549,14 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .md\:font-nono {
+    font-family: Noto Sans, sans-serif;
+  }
+
+  .md\:font-lobster {
+    font-family: Lobster, cursive;
+  }
+
   .md\:font-hairline {
     font-weight: 100;
   }
@@ -33759,6 +33791,10 @@ video {
 
   .md\:text-6xl {
     font-size: 4rem;
+  }
+
+  .md\:text-7xl {
+    font-size: 7rem;
   }
 
   .md\:leading-3 {
@@ -47264,6 +47300,14 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .lg\:font-nono {
+    font-family: Noto Sans, sans-serif;
+  }
+
+  .lg\:font-lobster {
+    font-family: Lobster, cursive;
+  }
+
   .lg\:font-hairline {
     font-weight: 100;
   }
@@ -47498,6 +47542,10 @@ video {
 
   .lg\:text-6xl {
     font-size: 4rem;
+  }
+
+  .lg\:text-7xl {
+    font-size: 7rem;
   }
 
   .lg\:leading-3 {
@@ -61003,6 +61051,14 @@ video {
     font-family: Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   }
 
+  .xl\:font-nono {
+    font-family: Noto Sans, sans-serif;
+  }
+
+  .xl\:font-lobster {
+    font-family: Lobster, cursive;
+  }
+
   .xl\:font-hairline {
     font-weight: 100;
   }
@@ -61237,6 +61293,10 @@ video {
 
   .xl\:text-6xl {
     font-size: 4rem;
+  }
+
+  .xl\:text-7xl {
+    font-size: 7rem;
   }
 
   .xl\:leading-3 {

@@ -248,6 +248,8 @@ module.exports = {
       ],
       serif: ['Georgia', 'Cambria', '"Times New Roman"', 'Times', 'serif'],
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace'],
+      nono: ["Noto Sans", "sans-serif"],
+      lobster: ["Lobster", "cursive"],
     },
     fontSize: {
       xs: '0.75rem',
@@ -260,6 +262,8 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      "6vw": "4vw",
+      "7vw": "7vw",
     },
     fontWeight: {
       hairline: '100',
