@@ -2,7 +2,7 @@ import React from "react"
 
 function Menu (){
     return(
-        <>
+        <div className="pt-16">
         <div>
             <h1>Menu</h1>
             <p>Call to get catering for your party or to find out where we will be set up next</p>
@@ -13,7 +13,7 @@ function Menu (){
         <div>
             
         </div>
-        </>
+        </div>
     )
 }
 

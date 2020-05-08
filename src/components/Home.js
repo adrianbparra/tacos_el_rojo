@@ -2,14 +2,14 @@ import React from "react"
 import {FaFacebookSquare,FaInstagramSquare} from "react-icons/fa";
 import {Link} from "react-router-dom";
 
-import shirt from "../assets/merch_shirt.jpg";
+import shirt from "../assets/images/merch_shirt.jpg";
+
+
+
 
 function Home (){
     return(
-        <>
-            <div>
-                <p>Catering and Taco Shop located in Arizona</p>
-            </div>
+        <div className="pt-16">
             
             <div>
                 <h2>
@@ -84,7 +84,7 @@ function Home (){
                     <Link to="/merch">More Merch</Link>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

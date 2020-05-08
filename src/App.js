@@ -1,9 +1,8 @@
 import React from 'react';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
-import "./App.css"
-
 import NavBar from "./components/Navbar.js";
+import Header from "./components/Header.js";
 import Footer from "./components/Footer.js";
 import Contact from "./components/Contact.js";
 import Events from "./components/Events.js";
@@ -14,28 +13,37 @@ import Merch from "./components/Merch.js"
 function App() {
   return (
     <Router>
-    <div className="App">
+      {/* container mx-auto px-10 max-w-screen-lg bg-orange-300 */}
+    <div className="container mx-auto bg-orange-300">
       <NavBar/>
+      <Header/>
+
+      <div className="container mx-auto px-10">
 
       <Switch>
         <Route path="/menu">
           <Menu/>
         </Route>
+        
         <Route path="/contact">
           <Contact/>
         </Route>
+
         <Route path="/events">
           <Events/>
         </Route>
+
         <Route path="/merch">
           <Merch/>
         </Route>
+
         <Route path="/">
           <Home/>
           
         </Route>
 
       </Switch>
+      </div>
 
       <Footer/>
     </div>
