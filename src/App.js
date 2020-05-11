@@ -14,11 +14,11 @@ function App() {
   return (
     <Router>
       {/* container mx-auto px-10 max-w-screen-lg bg-orange-300 */}
-    <div className="container mx-auto bg-orange-300 font-nono">
+    <div className="container mx-auto bg-primary font-nono">
       <NavBar/>
       <Header/>
 
-      <div className="container mx-auto px-10">
+      <div className="container mx-auto">
 
       <Switch>
         <Route path="/menu">
