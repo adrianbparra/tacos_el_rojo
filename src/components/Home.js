@@ -6,15 +6,27 @@ import shirt from "../assets/images/merch_shirt.jpg";
 import divFloorImg from "../assets/images/section_bg_wood_home.png";
 
 const BannerButton = (width) => {
-    return( 
-    <svg style={{display:"inline-block", position: "absolute",right:"0",bottom:"0",zIndex:"20"}} width="170" height="45" viewBox="0 0 100 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M20.4962 3.45128L29.7091 1.00001M20.4962 3.45128L29.7091 3.45128M20.4962 3.45128L20.4962 17.9138L20.4962 19.3845M29.7091 1.00001L18.2741 1C14.2435 1 8.48545 1.24513 5.60643 2.47076C2.7274 3.6964 1.38332 4.91231 1 6.63792L1 25.0225C1.38332 23.2968 2.7274 22.0809 5.60643 20.8553C8.48545 19.6297 14.2435 19.3845 18.2741 19.3845L20.4962 19.3845M29.7091 1.00001L29.7091 3.45128M20.4962 19.3845L20.4962 22.081L105.422 22.081L105.422 19.3845L105.422 17.9138L105.422 3.45126M29.7091 3.45128L96.2095 3.45126M105.422 3.45126L96.2095 0.999998L96.2095 3.45126M105.422 3.45126L96.2095 3.45126" stroke="black"/>
-        <path d="M20.7092 19.3848L38.5592 19.3848" stroke="black" stroke-width="0.5"/>
-        <path d="M20.7092 16.198L38.5592 16.198" stroke="black" stroke-width="0.5"/>
-        <path d="M20.7092 12.7662L38.5592 12.7662" stroke="black" stroke-width="0.5"/>
-        <path d="M20.7092 9.33444L38.5592 9.33444" stroke="black" stroke-width="0.5"/>
-        <path d="M20.7092 6.39291L38.5592 6.39291" stroke="black" stroke-width="0.5"/>
+    return(
+        // <svg width="103" height="26" viewBox="0 0 103 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+        // <path d="M26.7091 0.999902L15.2742 0.999892C11.2435 0.999892 8.87906 0.774251 6.00004 1.99988C4.5 2.63847 2.5 3.5 1 5.5L1 23.8845C2.5 22.0809 4.39371 21.0683 6.00005 20.3844C8.87906 19.1588 11.2435 19.3844 15.2742 19.3844L26.7091 19.3844M26.7091 0.999902L26.7091 19.3844M26.7091 0.999902L17.5 3.45115M26.7091 19.3844L17.5 22.0809" stroke="black"/>
+        // <path d="M102.5 21.9999H17.5V3.49991H102.5V21.9999Z" stroke="black"/>
+        // <path d="M17.7092 19.3847L35.5592 19.3847" stroke="black" stroke-width="0.5"/>
+        // <path d="M17.7092 16.1979L35.5592 16.1979" stroke="black" stroke-width="0.5"/>
+        // <path d="M17.7092 12.7661L35.5592 12.7661" stroke="black" stroke-width="0.5"/>
+        // <path d="M17.7092 9.33435L35.5592 9.33435" stroke="black" stroke-width="0.5"/>
+        // <path d="M17.7092 6.39282L35.5592 6.39282" stroke="black" stroke-width="0.5"/>
+        // </svg>
+
+    <svg style={{display:"inline-block", position:"absolute" ,right:"0", bottom:"0", zIndex:10}} width="166" height="50" viewBox="0 0 95 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M26.7091 0.999902L15.2742 0.999892C11.2435 0.999892 8.87906 0.774251 6.00004 1.99988C4.5 2.63847 2.5 3.5 1 5.5L1 23.8845C2.5 22.0809 4.39371 21.0683 6.00005 20.3844C8.87906 19.1588 11.2435 19.3844 15.2742 19.3844L26.7091 19.3844M26.7091 0.999902L26.7091 19.3844M26.7091 0.999902L17.5 3.45115M26.7091 19.3844L17.5 22.0809" fill="#E8D1B6" stroke="black"/>
+        <path d="M102.5 21.9999H17.5V3.49991H102.5V21.9999Z" fill="#E8D1B6" stroke="black"/>
+        <path d="M17.7092 19.3847L35.5592 19.3847" stroke="black" stroke-width="0.5"/>
+        <path d="M17.7092 16.1979L35.5592 16.1979" stroke="black" stroke-width="0.5"/>
+        <path d="M17.7092 12.7661L35.5592 12.7661" stroke="black" stroke-width="0.5"/>
+        <path d="M17.7092 9.33435L35.5592 9.33435" stroke="black" stroke-width="0.5"/>
+        <path d="M17.7092 6.39282L35.5592 6.39282" stroke="black" stroke-width="0.5"/>
     </svg>
+
     )
 };
 
@@ -33,7 +45,7 @@ function Home (){
     return(
         <div className="py-12">
             
-            <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 pb-10 relative" style={divImage}>
+            <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 pb-10 relative overflow-visible" style={divImage}>
                 <h2 className="font-lobster text-2xl">
                     Menu
                 </h2>
@@ -45,7 +57,7 @@ function Home (){
                     
                     <Link to="/menu" className="hover:text-black ">See Menu</Link>
                 </div>
-                <BannerButton className=""/>
+                <BannerButton />
 
             </div>
 
@@ -66,9 +78,10 @@ function Home (){
                     <a className="px-1 hover:text-red-600" href="https://www.instagram.com/shoptacoselrojo/" target="_blank" rel="noopener noreferrer"><FaInstagramSquare/></a>
                 </div>
 
-                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2">
+                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2 z-30">
                     <Link to="/contact" className="hover:text-black">More Contacts</Link>
                 </div>
+                <BannerButton />
             </div>
 
             <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 my-12 pb-10 relative" style={divImage}>
@@ -77,20 +90,23 @@ function Home (){
                 </h2>
                 
 
-                    <h3>Date:</h3>
+                    <h3 className="text-left pl-1">Date:</h3>
              
-                    <div>
-                        <p>05/15</p>
-                        <p>In our next event we will be having a give away of a pair of apple air pods everyone who buys tacos the day of.</p>
+                    <div className="flex pb-2">
+                        <p>TBA</p>
+                        <p className="text-left pl-4">In our next event we will be having a give away of a pair of apple air pods everyone who buys tacos the day of.</p>
                     </div>
-                    <div>
-                        <p>05/15</p>
-                        <p>New menu items including Rojos Burritos and Strawberry Horchata</p>
+                    <div className="flex pb-2">
+                        <p>TBA</p>
+                        <p className="text-left pl-4">New menu items including Rojos Burritos and Strawberry Horchata</p>
                     </div>
 
-                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2">
+                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2 z-30">
+                    
                     <Link to="/events" className="hover:text-black">More Events</Link>
+                    
                 </div>
+                <BannerButton />
             </div>
 
             <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 pb-10 relative" style={divImage}>
@@ -98,17 +114,23 @@ function Home (){
                     Merchandise
                 </h2>
 
-                <div>
-                    <h3>Shirts</h3>
-                    <p>Coming Soon!</p>
-
-                    <img src={shirt} alt="shirt_merch"></img>
+                <div className="flex justify-center items-center">
+                    <div className="flex-1">
+                        <h3 className="text-2xl underline">Shirts</h3>
+                        <p className="font-lobster text-xl">Coming Soon!</p>
+                    </div>
+                    
+                    <div className=" flex-1">
+                        <img className="max-h-full" src={shirt} alt="shirt_merch"></img>
+                    </div>
                 
                 </div>
 
-                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2">
-                    <Link to="/merch" className="hover:text-black">More Merch</Link>
+                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2 z-30">
+                    
+                    <Link to="/merch" className="hover:text-black z-30">More Merch</Link>
                 </div>
+                <BannerButton />
             </div>
         </div>
     )
