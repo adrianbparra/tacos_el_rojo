@@ -37,11 +37,11 @@ function Header(){
                 {/* absolute flex  items-center  text-3xl sm:text-5xl  */}
                 <div className="absolute flex bg-orange-200 bg-opacity-75 inset-0 flex-col justify-center items-center">
                     {/* p-32 md:p-20 font-lobster text-7xl sm:text-5xl */}
-                {location.pathname !== "/" && <h2 className="pb-6 sm:pb-12 font-lobster text-3xl text-center text-red-600 tracking-wider font-bold">{locName.toUpperCase()}</h2>}
+                {location.pathname !== "/" && <h2 className="sm:pb-12 font-lobster text-3xl text-center text-red-600 tracking-wider font-bold">{locName.toUpperCase()}</h2>}
                 {/* p-12 sm:text-3xl sm:p-16 text-center */}
-                {location.pathname !== "/" && <p className="pb-6 px-4 text-center text-lg font-bold">Call to get catering for your party or to find out where we will be set up next</p>}
+                {location.pathname !== "/" && <p className="sm:pb-12 px-4 text-center text-lg font-bold">Call to get catering for your party or to find out where we will be set up next</p>}
                 {/* p-24 sm:p-12 text-3xl sm:text-4xl */}
-                {location.pathname !=="/" && <h2 className=" font-lobster text-3xl text-red-600">(480) 822 9166</h2>}
+                {location.pathname !=="/" && <a className="text-3xl font-lobster text-red-600 hover:text-black" href="tel:4808229166">(480) 822 9166</a>}
                 </div>
 
                 

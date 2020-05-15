@@ -25,7 +25,7 @@ const BannerButton = ({r,b}) => {
 
 
 const divImage = {
-    background: ` linear-gradient( rgba(254, 235, 200, .75),rgba(254, 235, 200, .75) ), url(${divFloorImg})`,
+    background: ` linear-gradient( rgba(254, 235, 200, .85),rgba(254, 235, 200, .85) ), url(${divFloorImg})`,
     width: "100%",
     height: "auto"
 }
@@ -34,7 +34,7 @@ function Home (){
     return(
         <div className="py-12">
             
-            <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 pb-10 relative overflow-hidden "  style={divImage}>
+            <div className="container text-center bg-no-repeat bg-fill p-6 pb-10 relative overflow-hidden "  style={divImage}>
                 <h2 className="font-lobster text-2xl md:text-4xl">
                     Menu
                 </h2>

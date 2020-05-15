@@ -1,4 +1,5 @@
 import React from "react"
+import bgWood from "../assets/images/section_bg_wood.png";
 
 
 const BannerHeader = () =>{
@@ -20,9 +21,17 @@ const BannerHeader = () =>{
     )
 }
 
+
+const bgWoodImage = {
+    background: ` linear-gradient( rgba(254, 235, 200, .85),rgba(254, 235, 200, .85) ), url(${bgWood})`,
+    width: "100%",
+    height: "auto"
+}
+
+
 function Menu (){
     return(
-        <div className="py-8 grid grid-cols-1 text-center md:grid-cols-2">
+        <div className="py-8 grid grid-cols-1 text-center md:grid-cols-2 my-12" style={bgWoodImage}>
             
 
             <div className="p-4 relative">
@@ -79,7 +88,7 @@ function Menu (){
 
             <div className="md:col-start-1 md:col-end-3 pb-4 border-t border-black pt-3">
                 
-                <h1>Our menu items are seasonal so some might not be available at all times.</h1>
+                <h1 className="text-xl">Our menu items are seasonal so some might not be available at all times.</h1>
             </div>
         </div>
     )
