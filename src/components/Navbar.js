@@ -35,17 +35,17 @@ function NavBar() {
                     </Link>
                 </li>
                 <li className="px-2">
-                    <Link to="/menu">MENU</Link>
+                    <Link to="/menu" className="hover:text-black focus:text-black">MENU</Link>
                     
                 </li>
                 <li className="px-2">
-                    <Link to="/contact">CONTACT</Link>
+                    <Link to="/contact" className="hover:text-black focus:text-black">CONTACT</Link>
                 </li>
                 <li className="px-2">
-                    <Link to="/events">EVENTS</Link>
+                    <Link to="/events" className="hover:text-black focus:text-black">EVENTS</Link>
                 </li>
                 <li className="px-2">
-                    <Link to="/merch">MERCH</Link>
+                    <Link to="/merch" className="hover:text-black focus:text-blackA">MERCH</Link>
                 </li>
             </ul>
         </nav>

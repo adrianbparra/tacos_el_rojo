@@ -7692,6 +7692,10 @@ video {
   min-width: 100%;
 }
 
+.min-w-min {
+  min-width: 290px;
+}
+
 .object-contain {
   object-fit: contain;
 }
@@ -21588,6 +21592,10 @@ video {
 
   .sm\:min-w-full {
     min-width: 100%;
+  }
+
+  .sm\:min-w-min {
+    min-width: 290px;
   }
 
   .sm\:object-contain {
@@ -35489,6 +35497,10 @@ video {
     min-width: 100%;
   }
 
+  .md\:min-w-min {
+    min-width: 290px;
+  }
+
   .md\:object-contain {
     object-fit: contain;
   }
@@ -49388,6 +49400,10 @@ video {
     min-width: 100%;
   }
 
+  .lg\:min-w-min {
+    min-width: 290px;
+  }
+
   .lg\:object-contain {
     object-fit: contain;
   }
@@ -63285,6 +63301,10 @@ video {
 
   .xl\:min-w-full {
     min-width: 100%;
+  }
+
+  .xl\:min-w-min {
+    min-width: 290px;
   }
 
   .xl\:object-contain {
