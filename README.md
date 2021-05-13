@@ -30,6 +30,7 @@ Project created with:
 
 * [React.js](Reactjs.org)- Javascript Library for UI
 * [Tailwindcss](https://tailwindcss.com/) - CSS Styling Library
+* [ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/?view=aspnetcore-5.0) - .NET API
 
 
 ## Installation
@@ -40,7 +41,7 @@ Project created with:
 
 ### Setup
 ```
-- cd into tacos_el_rojo
+- cd into tacos_el_rojo/client
 - npm install
 - npm start
 ```
