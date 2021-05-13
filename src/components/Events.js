@@ -38,12 +38,9 @@ function Events (){
             <BannerHeader/>
             </div>
 
-            <div className="flex text-left items-center justify-between mx-4 lg:mx-24 py-4 border-b border-black ">
-                <p className="pr-6">Our next event we will be having a give away for an apple air pod, stay tuned for a date</p>
-                <span>TBA</span>
-            </div>
+            
             <div className="flex text-left items-center justify-between mx-4 lg:mx-24 py-4 border-b border-black">
-                <p className="pr-6">New menu items including Rojos Burritos and Strawberry Horchata</p>
+                <p className="pr-6">Reds Hibachi</p>
                 <span>TBA</span>
             </div>
 
