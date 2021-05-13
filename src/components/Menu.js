@@ -57,6 +57,8 @@ function Menu (){
                     <li className="pb-1">Carne Asada</li>
                     <li className="pb-1">Birria</li>
                     <li className="pb-1">Pastor</li>
+                    <li className="pb-1">Shrimp</li>
+
 
                 </ul>
 
@@ -68,6 +70,7 @@ function Menu (){
                 <ul>
                     <li className="pb-1">Carne Asada</li>
                     <li className="pb-1">Pastor</li>
+                    <li className="pb-1">Birria</li>
 
                 </ul>
             </div>
