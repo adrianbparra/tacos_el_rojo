@@ -1,7 +1,9 @@
 import React from 'react';
 import { render, unmountComponentAtNode } from "react-dom";
 import { act } from "react-dom/test-utils";
-import App from './App';
+import Merch from "../components/Merch.js";
+
+
 
 let container = null;
 beforeEach(() => {
@@ -17,9 +19,11 @@ afterEach(() => {
   container = null;
 });
 
-test('renders navBar', () => {
-  act(()=>{
-      render(<App/>, container);
-  })
-  expect (container.textContent).toContain("Tacos")
-});
+
+it("renders merch page", ()=>{
+    act(()=> {
+        render(<Merch/>,container);
+    })
+    expect(container.textContent).toContain("Merchandise");
+
+})
