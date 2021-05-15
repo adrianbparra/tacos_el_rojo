@@ -45,7 +45,7 @@ function NavBar() {
                     <Link to="/events" className="hover:text-black focus:text-black">EVENTS</Link>
                 </li>
                 <li className="md:px-2">
-                    <Link to="/merch" className="hover:text-black focus:text-blackA">MERCH</Link>
+                    <Link to="/merch" className="hover:text-black focus:text-black">MERCH</Link>
                 </li>
             </ul>
         </nav>
