@@ -41,7 +41,7 @@ Project created with:
 
 ### Setup
 ```
-- cd into tacos_el_rojo/client
+- cd into tacos_el_rojo/client/
 - npm install
 - npm start
 ```
