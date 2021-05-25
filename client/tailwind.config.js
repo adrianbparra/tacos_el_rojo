@@ -11,6 +11,9 @@ module.exports = {
      variants: {
        extend: {
         fontSize: ['hover', 'focus'],
+        position: ['hover','focus'],
+        borderWidth: ['hover', 'focus'],
+        borderStyle: ['hover', 'focus'],
        },
      },
      plugins: [],
