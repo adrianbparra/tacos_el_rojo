@@ -14,6 +14,7 @@ module.exports = {
         position: ['hover','focus'],
         borderWidth: ['hover', 'focus'],
         borderStyle: ['hover', 'focus'],
+        margin: ['hover', 'focus'],
        },
      },
      plugins: [],
