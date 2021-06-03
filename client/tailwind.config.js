@@ -2,7 +2,12 @@ module.exports = {
     purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
      darkMode: false, // or 'media' or 'class'
      theme: {
-       extend: {},
+       extend: {
+         skew: {
+           "36": "36deg",
+           "-36": "-36deg",
+         }
+       },
        fontFamily: {
         noto: ["Noto Sans", "sans-serif"],
         lobster: ["Lobster", "cursive"],
@@ -11,11 +16,29 @@ module.exports = {
      variants: {
        extend: {
         fontSize: ['hover', 'focus'],
-        position: ['hover','focus'],
-        borderWidth: ['hover', 'focus'],
-        borderStyle: ['hover', 'focus'],
+        position: ['hover','focus','hover::before','hover::after'],
+        borderWidth: ['hover', 'focus','hover::before','hover::after'],
+        borderStyle: ['hover', 'focus','hover::before','hover::after'],
+        borderColor:['hover::before','hover::after'],
         margin: ['hover', 'focus'],
+        width:['hover::before','hover::after'],
+        display:['hover::before','hover::after'],
+        height:['hover::before','hover::after'],
+        zIndex:['hover::before','hover::after'],
+        inset:['hover::before','hover::after'],
+        transform:['hover::before','hover::after'],
+        rotate:['hover::before','hover::after'],
+        skew:['hover::before','hover::after'],
        },
      },
-     plugins: [],
+     plugins: [
+      require('tailwindcss-pseudo-elements')({
+        customPseudoClasses: [],
+        customPseudoElements: [],
+        contentUtilities: true,
+        emptyContent: true,
+        classNameReplacer: {
+        },
+      }),
+     ],
    }
