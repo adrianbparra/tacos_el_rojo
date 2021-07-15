@@ -3,9 +3,9 @@ import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
 import NavBar from "./components/Navbar.js";
 import Header from "./components/Header.js";
-import Footer from "./components/Footer.js";
-import Contact from "./components/Contact.js";
-import Events from "./components/Events.js";
+import Footer from "./components/Footer.tsx";
+import Contact from "./components/Contact.tsx";
+import Events from "./components/Events.tsx";
 import Home from "./components/Home.js";
 import Menu from "./components/Menu.js";
 import Merch from "./components/Merch.js"
