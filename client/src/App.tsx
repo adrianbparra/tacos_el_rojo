@@ -1,14 +1,14 @@
 import React from 'react';
 import {BrowserRouter as Router,Switch,Route} from "react-router-dom";
 
-import NavBar from "./components/Navbar.js";
-import Header from "./components/Header.js";
-import Footer from "./components/Footer.tsx";
-import Contact from "./components/Contact.tsx";
-import Events from "./components/Events.tsx";
-import Home from "./components/Home.js";
-import Menu from "./components/Menu.js";
-import Merch from "./components/Merch.js"
+import NavBar from "./components/Navbar";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Contact from "./components/Contact";
+import Events from "./components/Events";
+import Home from "./components/Home";
+import Menu from "./components/Menu";
+import Merch from "./components/Merch"
 
 function App() {
   return (
@@ -39,7 +39,6 @@ function App() {
 
         <Route path="/">
           <Home/>
-          
         </Route>
 
       </Switch>
