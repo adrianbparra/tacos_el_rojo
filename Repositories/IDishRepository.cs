@@ -10,6 +10,8 @@ namespace tacos_el_rojo.Repositories
         Dish GetDish(Guid id);
         IEnumerable<Dish> GetDishes();
         void CreateDish(Dish dish);
+        void UpdateDish(Dish dish);
+        void DeleteDish(Guid id);
     }
         
 }

@@ -29,7 +29,21 @@ namespace tacos_el_rojo.Repositories
 
         public void CreateDish(Dish dish)
         {
-            throw new NotImplementedException();
+            dishes.Add(dish);
+        }
+
+        public void UpdateDish(Dish dish)
+        {
+            var index = dishes.FindIndex(existingDish => existingDish.Id == dish.Id);
+
+            dishes[index] = dish;
+        }
+
+        public void DeleteDish(Guid id)
+        {
+            var index = dishes.FindIndex(existingDish => existingDish.Id == id);
+
+            dishes.RemoveAt(index);
         }
     }
 }

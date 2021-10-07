@@ -43,7 +43,62 @@ namespace tacos_el_rojo.Controllers
 
             return Ok(dish.AsDto());
         }
+
+        // POST /dishes
+        [HttpPost]
+        public ActionResult<DishDto> CreateDish(CreateDishDto dishDto)
+        {
+            Dish dish = new(){
+                Id = Guid.NewGuid(),
+                Name = dishDto.Name,
+                Toppings = dishDto.Toppings,
+                Price = dishDto.Price,
+                CreatedDate = DateTimeOffset.UtcNow
+            };
+
+            repository.CreateDish(dish);
+
+            return CreatedAtAction(nameof(GetDish), new { id = dish.Id}, dish.AsDto());
+        }
+
+        // PUT /dishes/{id}
+        [HttpPut("{id}")]
+        public ActionResult UpdateDish(Guid id, UpdateDishDto dishDto)
+        {
+            var existingDish = repository.GetDish(id);
+
+            if (existingDish is null)
+            {
+                return NotFound();
+            }
+
+            Dish updatedDish = existingDish with {
+                Name = dishDto.Name,
+                Price = dishDto.Price,
+                Toppings = dishDto.Toppings,
+
+            };
+
+            repository.UpdateDish(updatedDish);
+
+            return NoContent();
+        }
         
+        // DELETE /dishes/{id}
+        [HttpDelete("{id}")]
+        public ActionResult DeleteDish(Guid id)
+        {
+            var existingDish = repository.GetDish(id);
+
+            if (existingDish is null)
+            {
+                return NotFound();
+            }
+
+            repository.DeleteDish(id);
+
+            return NoContent();
+        }
 
     }
     
