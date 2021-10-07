@@ -16,32 +16,33 @@ function App() {
       {/* container mx-auto px-10 max-w-screen-lg bg-orange-300 */}
     <div className="container mx-auto bg-primary font-nono min-w-min">
       <NavBar/>
-      <Header/>
+
+      {/* <Header/> */}
 
       <div className="container mx-auto">
 
-      <Switch>
-        <Route path="/menu">
-          <Menu/>
-        </Route>
-        
-        <Route path="/contact">
-          <Contact/>
-        </Route>
+        <Switch>
+          <Route path="/menu">
+            <Menu/>
+          </Route>
+          
+          <Route path="/contact">
+            <Contact/>
+          </Route>
 
-        <Route path="/events">
-          <Events/>
-        </Route>
+          <Route path="/events">
+            <Events/>
+          </Route>
 
-        <Route path="/merch">
-          <Merch/>
-        </Route>
+          <Route path="/merch">
+            <Merch/>
+          </Route>
 
-        <Route path="/">
-          <Home/>
-        </Route>
+          <Route path="/">
+            <Home/>
+          </Route>
 
-      </Switch>
+        </Switch>
       </div>
 
       <Footer/>

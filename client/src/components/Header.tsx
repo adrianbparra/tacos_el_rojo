@@ -1,4 +1,4 @@
-import React from "react";
+import React,{FC} from "react";
 import {useLocation} from "react-router-dom";
 
 import bg from "../assets/images/tacos_el_rojo_logo_bg.jpg";
@@ -12,14 +12,16 @@ const bgImage = {
 
 }
 
-function Header(){
+interface LocationState {
+    pathname: string;
+}
 
-    
-    let location = useLocation()
-    
-    // console.log(location)
+const Header: FC = () => {
 
-        if(location.pathname === "/"){
+    const location  =  useLocation<LocationState>();
+    const {pathname} = location;
+
+        if(pathname === "/"){
             return (
                 <div className="relative bg-no-repeat bg-contain" style={bgImage}>
                     <div className="absolute flex justify-center bg-orange-200 bg-opacity-75 inset-0">
