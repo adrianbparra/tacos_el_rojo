@@ -14,27 +14,30 @@ namespace tacos_el_rojo.Controllers
 
     public class DishController : ControllerBase
     {
-        private readonly IDishRepository repository;
+        private readonly AzureDbDishRepository _context;
 
-        public DishController(IDishRepository repository)
+        public DishController(AzureDbDishRepository context)
         {
-            this.repository = repository;
+            _context = context;
         }
         
         // Get /dishes
         [HttpGet]
         public ActionResult<IEnumerable<DishDto>> GetDishes()
         {
-            var dishes = repository.GetDishes().Select( dish => dish.AsDto());
+            Console.WriteLine("get dishes");
+            
+            var dishes = _context.Dishes.AsEnumerable();
 
             return Ok(dishes);
+
         }
 
         // Get /dishes/{id}
         [HttpGet("{id}")]
         public ActionResult<DishDto> GetDish(Guid id)
         {
-            var dish = repository.GetDish(id);
+            var dish = _context.GetDish(id);
 
             if (dish is null)
             {
@@ -49,14 +52,14 @@ namespace tacos_el_rojo.Controllers
         public ActionResult<DishDto> CreateDish(CreateDishDto dishDto)
         {
             Dish dish = new(){
-                Id = Guid.NewGuid(),
                 Name = dishDto.Name,
                 Toppings = dishDto.Toppings,
                 Price = dishDto.Price,
                 CreatedDate = DateTimeOffset.UtcNow
             };
 
-            repository.CreateDish(dish);
+            _context.Add(dish);
+            _context.SaveChanges();
 
             return CreatedAtAction(nameof(GetDish), new { id = dish.Id}, dish.AsDto());
         }
@@ -65,7 +68,7 @@ namespace tacos_el_rojo.Controllers
         [HttpPut("{id}")]
         public ActionResult UpdateDish(Guid id, UpdateDishDto dishDto)
         {
-            var existingDish = repository.GetDish(id);
+            var existingDish = _context.GetDish(id);
 
             if (existingDish is null)
             {
@@ -79,7 +82,7 @@ namespace tacos_el_rojo.Controllers
 
             };
 
-            repository.UpdateDish(updatedDish);
+            _context.UpdateDish(updatedDish);
 
             return NoContent();
         }
@@ -88,14 +91,14 @@ namespace tacos_el_rojo.Controllers
         [HttpDelete("{id}")]
         public ActionResult DeleteDish(Guid id)
         {
-            var existingDish = repository.GetDish(id);
+            var existingDish = _context.GetDish(id);
 
             if (existingDish is null)
             {
                 return NotFound();
             }
 
-            repository.DeleteDish(id);
+            _context.DeleteDish(id);
 
             return NoContent();
         }

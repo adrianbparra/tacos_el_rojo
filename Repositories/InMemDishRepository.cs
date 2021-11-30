@@ -10,9 +10,9 @@ namespace tacos_el_rojo.Repositories
     {
         private readonly List<Dish> dishes = new()
         {
-            new Dish { Id = Guid.NewGuid(), Name = "Tacos", Price = 5, CreatedDate = DateTimeOffset.UtcNow },
-            new Dish { Id = Guid.NewGuid(), Name = "Burritos", Price = 6, CreatedDate = DateTimeOffset.UtcNow },
-            new Dish { Id = Guid.NewGuid(), Name = "Quesadillas", Price = 6, CreatedDate = DateTimeOffset.UtcNow },
+            new Dish { Name = "Tacos", Price = 5, CreatedDate = DateTimeOffset.UtcNow },
+            new Dish { Name = "Burritos", Price = 6, CreatedDate = DateTimeOffset.UtcNow },
+            new Dish { Name = "Quesadillas", Price = 6, CreatedDate = DateTimeOffset.UtcNow },
 
 
         };
@@ -22,7 +22,7 @@ namespace tacos_el_rojo.Repositories
             return dishes;
         }
 
-        public Dish GetDish(Guid id)
+        public Dish GetDish(int id)
         {
             return dishes.Where(dishes => dishes.Id == id).SingleOrDefault();
         }
@@ -39,7 +39,7 @@ namespace tacos_el_rojo.Repositories
             dishes[index] = dish;
         }
 
-        public void DeleteDish(Guid id)
+        public void DeleteDish(int id)
         {
             var index = dishes.FindIndex(existingDish => existingDish.Id == id);
 

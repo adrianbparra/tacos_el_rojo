@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace  tacos_el_rojo.Dtos
 {
@@ -6,9 +7,10 @@ namespace  tacos_el_rojo.Dtos
     {
 
         //  can not modify with init
-        public Guid Id {get; init;}
+        public int Id {get; init;}
         public string Name {get; init;}
         // it will be toppings of meats that can be on dish
+        [NotMapped]
         public string[] Toppings {get; init;}
         public double Price {get; init;}
         public DateTimeOffset CreatedDate {get; init;}

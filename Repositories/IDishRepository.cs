@@ -7,11 +7,11 @@ namespace tacos_el_rojo.Repositories
 
     public interface IDishRepository
     {
-        Dish GetDish(Guid id);
+        Dish GetDish(int id);
         IEnumerable<Dish> GetDishes();
         void CreateDish(Dish dish);
         void UpdateDish(Dish dish);
-        void DeleteDish(Guid id);
+        void DeleteDish(int id);
     }
         
 }
