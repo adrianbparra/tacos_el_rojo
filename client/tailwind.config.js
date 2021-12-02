@@ -6,6 +6,10 @@ module.exports = {
          skew: {
            "36": "36deg",
            "-36": "-36deg",
+         },
+         colors: {
+          primary: "#E8D1B6",
+          secondary: "#B50000"
          }
        },
        fontFamily: {
