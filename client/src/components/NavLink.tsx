@@ -11,7 +11,7 @@ interface ILinkProps{
     children: React.ReactNode;
 }
 
-const NavButtonLink:FC<ILinkProps> = (props) => {
+const NavLink:FC<ILinkProps> = (props) => {
 
     const {to, children} = props;
 
@@ -22,6 +22,4 @@ const NavButtonLink:FC<ILinkProps> = (props) => {
             )
 }
 
-export {
-    NavButtonLink
-}
+export default NavLink

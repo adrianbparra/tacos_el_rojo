@@ -2,7 +2,7 @@ import React, {FC} from "react"
 import {Link} from "react-router-dom";
 import tacosElRojoLogo from "../assets/images/tacos_el_rojo_logo_2.png";
 
-import {NavButtonLink} from "../assets/TailwindComponents";
+import NavLink from "./NavLink";
 
 
 const NavBar : FC = () => {
@@ -18,13 +18,13 @@ const NavBar : FC = () => {
 
             <div className="flex-grow flex justify-around items-center border-solid border-black border-t-2 border-b-2 mb-3">
 
-                <NavButtonLink to="/menu">
-                        MENU
-                </NavButtonLink>
+                <NavLink to="/menu">
+                    MENU
+                </NavLink>
 
-                <NavButtonLink to="/events">
+                <NavLink to="/events">
                     EVENTS
-                </NavButtonLink>
+                </NavLink>
 
                 <li className="md:px-2 flex-1 hidden lg:block">
                     <Link to="/" className="flex justify-around">
@@ -38,13 +38,13 @@ const NavBar : FC = () => {
                     </Link>
                 </li>
 
-                <NavButtonLink to="/merch">
+                <NavLink to="/merch">
                     MERCH
-                </NavButtonLink>
+                </NavLink>
 
-                <NavButtonLink to="/catering">
+                <NavLink to="/catering">
                     CATERING
-                </NavButtonLink>
+                </NavLink>
             </div>
             
             <svg width="100%" className="w-4" viewBox="0 0 16 141" fill="none" xmlns="http://www.w3.org/2000/svg">
