@@ -2,6 +2,8 @@ import React from "react"
 import {FaFacebookSquare,FaInstagramSquare} from "react-icons/fa";
 import {Link} from "react-router-dom";
 
+import ContainerTitle from "./ContainerTitle";
+
 import shirt from "../assets/images/merch_shirt.jpg";
 import divFloorImg from "../assets/images/section_bg_wood_home.png";
 
@@ -35,9 +37,12 @@ function Home (){
         <div className="py-12">
             
             <div className="container text-center bg-no-repeat bg-fill p-6 pb-10 relative overflow-hidden "  style={divImage}>
-                <h2 className="font-lobster text-2xl md:text-4xl">
+                
+                
+                <ContainerTitle>
                     Menu
-                </h2>
+                </ContainerTitle>
+                
                 <p className="lg:text-2xl">
                     I offer a selection of tacos, burritos and quesadillas. With a range of different meats to choose from to top the main dish. Includes savory condiments to make our food favlorful.
                 </p>
@@ -51,9 +56,10 @@ function Home (){
             </div>
 
             <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 my-12 pb-10 relative overflow-hidden" style={divImage}>
-                <h2 className="font-lobster text-2xl  md:text-4xl">
+                <ContainerTitle>
                     Contact
-                </h2>
+                </ContainerTitle>
+
                 <p>Give us a call at:</p>
                 <a className="text-xl font-bold hover:text-red-600" href="tel:4808229166">(480)822-9166</a>
                 <p>Or Follow us:</p>
@@ -74,21 +80,21 @@ function Home (){
             </div>
 
             <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 my-12 pb-10 relative overflow-hidden" style={divImage}>
-                <h2 className="font-lobster text-2xl  md:text-4xl">
-                    See our upcoming events
-                </h2>
+                <ContainerTitle>
+                    Events
+                </ContainerTitle>
                 
 
-                    <h3 className="text-left pl-1 lg:text-3xl">Date:</h3>
-             
-                    <div className="flex pb-2 lg:text-2xl">
-                        <p>TBA</p>
-                        <p className="text-left pl-4 lg:pl-12">In our next event we will be having a give away of a pair of apple air pods everyone who buys tacos the day of.</p>
-                    </div>
-                    <div className="flex pb-2 lg:text-2xl">
-                        <p>TBA</p>
-                        <p className="text-left pl-4 lg:pl-12">New menu items including Rojos Burritos and Strawberry Horchata</p>
-                    </div>
+                <h3 className="text-left pl-1 lg:text-3xl">Date:</h3>
+            
+                <div className="flex pb-2 lg:text-2xl">
+                    <p>TBA</p>
+                    <p className="text-left pl-4 lg:pl-12">In our next event we will be having a give away of a pair of apple air pods everyone who buys tacos the day of.</p>
+                </div>
+                <div className="flex pb-2 lg:text-2xl">
+                    <p>TBA</p>
+                    <p className="text-left pl-4 lg:pl-12">New menu items including Rojos Burritos and Strawberry Horchata</p>
+                </div>
 
                 <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2 z-30">
                     
@@ -99,9 +105,9 @@ function Home (){
             </div>
 
             <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 pb-10 relative overflow-hidden" style={divImage}>
-                <h2 className="font-lobster text-2xl  md:text-4xl">
-                    Merchandise
-                </h2>
+                <ContainerTitle>
+                    Merch
+                </ContainerTitle>
 
                 <div className="flex justify-center items-center">
                     <div className="flex-1">
