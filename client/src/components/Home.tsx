@@ -1,64 +1,32 @@
 import React from "react"
 import {FaFacebookSquare,FaInstagramSquare} from "react-icons/fa";
-import {Link} from "react-router-dom";
 
-import ContainerTitle from "./ContainerTitle";
+import TitleContainer from "./TitleContainer";
+import HomeContainer from "./HomeContainer";
 
 import shirt from "../assets/images/merch_shirt.jpg";
-import divFloorImg from "../assets/images/section_bg_wood_home.png";
 
-const BannerButton = () => {
-    return(
-    <svg style={{display:"inline-block", position:"absolute" ,right:0, bottom:0, zIndex:-10}} width="195" height="56" viewBox="0 0 165 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M26.7091 0.999902L15.2742 0.999892C11.2435 0.999892 8.87906 0.774251 6.00004 1.99988C4.5 2.63847 2.5 3.5 1 5.5L1 23.8845C2.5 22.0809 4.39371 21.0683 6.00005 20.3844C8.87906 19.1588 11.2435 19.3844 15.2742 19.3844L26.7091 19.3844M26.7091 0.999902L26.7091 19.3844M26.7091 0.999902L17.5 3.45115M26.7091 19.3844L17.5 22.0809" fill="#E8D1B6" stroke="black"/>
-        <path d="M164 21.9999H17.5V3.49991H164V21.9999Z" fill="#E8D1B6" stroke="black"/>
-        <path d="M17.7092 19.3847L35.5592 19.3847" stroke="black" strokeWidth="0.5"/>
-        <path d="M17.7092 16.1979L35.5592 16.1979" stroke="black" strokeWidth="0.5"/>
-        <path d="M17.7092 12.7661L35.5592 12.7661" stroke="black" strokeWidth="0.5"/>
-        <path d="M17.7092 9.33435L35.5592 9.33435" stroke="black" strokeWidth="0.5"/>
-        <path d="M17.7092 6.39282L35.5592 6.39282" stroke="black" strokeWidth="0.5"/>
-    </svg>
-    )
-};
-
-
-
-
-
-
-const divImage = {
-    background: ` linear-gradient( rgba(254, 235, 200, .85),rgba(254, 235, 200, .85) ), url(${divFloorImg})`,
-    width: "100%",
-    height: "auto"
-}
 
 function Home (){
     return(
-        <div className="py-12">
+        <div className="py-12 px-6">
             
-            <div className="container text-center bg-no-repeat bg-fill p-6 pb-10 relative overflow-hidden "  style={divImage}>
+            <HomeContainer>
                 
-                
-                <ContainerTitle>
+                <TitleContainer title="menu">
                     Menu
-                </ContainerTitle>
+                </TitleContainer>
                 
                 <p className="lg:text-2xl">
                     I offer a selection of tacos, burritos and quesadillas. With a range of different meats to choose from to top the main dish. Includes savory condiments to make our food favlorful.
                 </p>
 
-                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2 z-50">
-                    
-                    <Link to="/menu" className="hover:text-black">See Menu</Link>
-                    <BannerButton/>
-                </div>
+            </HomeContainer>
 
-            </div>
-
-            <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 my-12 pb-10 relative overflow-hidden" style={divImage}>
-                <ContainerTitle>
+            <HomeContainer>
+                <TitleContainer title="contact">
                     Contact
-                </ContainerTitle>
+                </TitleContainer>
 
                 <p>Give us a call at:</p>
                 <a className="text-xl font-bold hover:text-red-600" href="tel:4808229166">(480)822-9166</a>
@@ -72,17 +40,12 @@ function Home (){
                     <span>Merch</span>
                     <a className="px-1 hover:text-red-600 text-3xl" href="https://www.instagram.com/shoptacoselrojo/" target="_blank" rel="noopener noreferrer"><FaInstagramSquare/></a>
                 </div>
+            </HomeContainer>
 
-                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2 z-30">
-                    <Link to="/contact" className="hover:text-black">More Contacts</Link>
-                    <BannerButton />
-                </div>
-            </div>
-
-            <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 my-12 pb-10 relative overflow-hidden" style={divImage}>
-                <ContainerTitle>
+            <HomeContainer>
+                <TitleContainer title="events">
                     Events
-                </ContainerTitle>
+                </TitleContainer>
                 
 
                 <h3 className="text-left pl-1 lg:text-3xl">Date:</h3>
@@ -96,18 +59,13 @@ function Home (){
                     <p className="text-left pl-4 lg:pl-12">New menu items including Rojos Burritos and Strawberry Horchata</p>
                 </div>
 
-                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2 z-30">
-                    
-                    <Link to="/events" className="hover:text-black">More Events</Link>
-                    
-                    <BannerButton/>
-                </div>
-            </div>
+            </HomeContainer>
 
-            <div className="container text-center bg-no-repeat bg-fill bg-opacity-75 p-6 pb-10 relative overflow-hidden" style={divImage}>
-                <ContainerTitle>
+            <HomeContainer>
+
+                <TitleContainer title="merch">
                     Merch
-                </ContainerTitle>
+                </TitleContainer>
 
                 <div className="flex justify-center items-center">
                     <div className="flex-1">
@@ -120,13 +78,7 @@ function Home (){
                     </div>
                 
                 </div>
-
-                <div className="font-lobster text-2xl text-red-600 inline-block absolute bottom-0 right-0 pr-2 z-30 ">
-                    
-                    <Link to="/merch" className="hover:text-black z-30">More Merch</Link>
-                    <BannerButton />
-                </div>
-            </div>
+            </HomeContainer>
         </div>
     )
 }
