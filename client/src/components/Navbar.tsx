@@ -42,8 +42,8 @@ const NavBar : FC = () => {
                     MERCH
                 </NavLink>
 
-                <NavLink to="/catering">
-                    CATERING
+                <NavLink to="/contact">
+                    CONTACT
                 </NavLink>
             </div>
             
