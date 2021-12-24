@@ -1,5 +1,5 @@
 import React, {FC} from "react"
-import {Link} from "react-router-dom";
+import {Link, useRouteMatch} from "react-router-dom";
 
 
 const navBannerEdges : string = "content-hover-before content-hover-after hover:before:absolute hover:after:absolute hover:before:w-3.5 hover:after:w-3.5 hover:before:h-4 hover:after:h-4  hover:before:border-black hover:after:border-black ";
@@ -14,9 +14,13 @@ interface ILinkProps{
 const NavLink:FC<ILinkProps> = (props) => {
 
     const {to, children} = props;
+    const match = useRouteMatch({
+        path: to,
+        exact: true
+    });
 
     return (
-            <Link to={to} tw-content-hover-before="" tw-content-hover-after="" className={`${navBannerEdges} ${navLeftBannerEdge} ${navRightBannerEdge} hover:bg-primary box-border relative flex-1 border-solid mx-0.5 hover:mx-0 flex justify-center items-center transform hover:translate-y-3 border-black inline-block h-full hover:border-2 hover:text-base hover:h-full  md:hover:text-4xl focus:text-black`}>
+            <Link to={to} tw-content-hover-before="" tw-content-hover-after="" className={`${navBannerEdges} ${navLeftBannerEdge} ${navRightBannerEdge} hover:bg-primary box-border relative flex-1 border-solid mx-0.5 hover:mx-0 flex justify-center items-center transform hover:translate-y-3 border-black inline-block h-full hover:border-2 hover:text-base hover:h-full md:hover:text-4xl`}>
                 {children}
             </Link>
             )
