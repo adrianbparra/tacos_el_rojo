@@ -11,6 +11,10 @@ interface ILinkProps{
     children: React.ReactNode;
 }
 
+function classNames(...classes:string[]): string {
+    return classes.filter(Boolean).join(" ")
+}
+
 const NavLink:FC<ILinkProps> = (props) => {
 
     const {to, children} = props;
@@ -20,7 +24,19 @@ const NavLink:FC<ILinkProps> = (props) => {
     });
 
     return (
-            <Link to={to} tw-content-hover-before="" tw-content-hover-after="" className={`${navBannerEdges} ${navLeftBannerEdge} ${navRightBannerEdge} hover:bg-primary box-border relative flex-1 border-solid mx-0.5 hover:mx-0 flex justify-center items-center transform hover:translate-y-3 border-black inline-block h-full hover:border-2 hover:text-base hover:h-full md:hover:text-4xl`}>
+            <Link 
+                to={to} 
+                tw-content-hover-before="" 
+                tw-content-hover-after=""
+                className={classNames(
+                    match ?  "text-black" : "text-secondary",
+                    navBannerEdges,
+                    navLeftBannerEdge,
+                    navRightBannerEdge,
+                    "hover:text-black bg-primary box-border relative flex-1 border-solid mx-0.5 hover:mx-0 flex justify-center items-center transform hover:translate-y-3 border-black inline-block h-full hover:border-2 hover:text-base hover:h-full md:hover:text-4xl"
+                )} 
+                // className={`${navBannerEdges} ${navLeftBannerEdge} ${navRightBannerEdge} hover:bg-primary box-border relative flex-1 border-solid mx-0.5 hover:mx-0 flex justify-center items-center transform hover:translate-y-3 border-black inline-block h-full hover:border-2 hover:text-base hover:h-full md:hover:text-4xl`}
+            >
                 {children}
             </Link>
             )
