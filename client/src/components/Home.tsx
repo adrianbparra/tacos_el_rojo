@@ -5,6 +5,7 @@ import TitleContainer from "./TitleContainer";
 import HomeContainer from "./HomeContainer";
 
 import shirt from "../assets/images/merch_shirt.jpg";
+import MenuItem from "./MenuItem";
 
 
 function Home (){
@@ -20,6 +21,13 @@ function Home (){
                 <p className="lg:text-2xl">
                     I offer a selection of tacos, burritos and quesadillas. With a range of different meats to choose from to top the main dish. Includes savory condiments to make our food favlorful.
                 </p>
+                <div className="flex flex-col md:flex-row">
+                    {
+                        [{to:"menu",img:"tacosimage",name:"tacos"}].map( menuItem => {
+                            return <MenuItem to={menuItem.to} img={menuItem.img} name={menuItem.name} />
+                        })
+                    }
+                </div>
 
             </HomeContainer>
 
