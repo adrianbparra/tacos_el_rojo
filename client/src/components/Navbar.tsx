@@ -4,7 +4,7 @@ import tacosElRojoLogo from "../assets/images/tacos_el_rojo_logo_2.png";
 
 import NavLink from "./NavLink";
 
-const NavBar : FC = () => {
+function NavBar( ) {
     
     return(
         
@@ -27,7 +27,7 @@ const NavBar : FC = () => {
                 <li className="md:px-2 flex-1 block">
                     <Link to="/" className="flex justify-around">
                         <img 
-                            className="h-20 w-20 md:h-24 md:w-24" 
+                            className="h-16 w-16 md:h-24 md:w-24" 
                             src={tacosElRojoLogo}
                             alt="Tacos El Rojo Logo"
                             loading="lazy"
