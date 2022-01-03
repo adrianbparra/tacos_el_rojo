@@ -18,12 +18,12 @@ function Home (){
                     Menu
                 </TitleContainer>
                 
-                <p className="lg:text-2xl">
+                {/* <p className="lg:text-2xl">
                     I offer a selection of tacos, burritos and quesadillas. With a range of different meats to choose from to top the main dish. Includes savory condiments to make our food favlorful.
-                </p>
-                <div className="flex md:flex-row">
+                </p> */}
+                <div className="my-14 grid justify-items-center gap-y-16 md:gap-y-14 xl:gap-y-24 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                     {
-                        [{to:"menu",img:"tacos",name:"tacos"}].map( menuItem => {
+                        [{to:"menu",img:"tacos",name:"tacos"},{to:"menu",img:"quesadilla",name:"quesadilla"},{to:"menu",img:"tacos",name:"tacos"},{to:"menu",img:"quesadilla",name:"quesadilla"}].map( menuItem => {
                             return <MenuItem to={menuItem.to} img={menuItem.img} name={menuItem.name} />
                         })
                     }
