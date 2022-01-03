@@ -21,9 +21,9 @@ function Home (){
                 <p className="lg:text-2xl">
                     I offer a selection of tacos, burritos and quesadillas. With a range of different meats to choose from to top the main dish. Includes savory condiments to make our food favlorful.
                 </p>
-                <div className="flex flex-col md:flex-row">
+                <div className="flex md:flex-row">
                     {
-                        [{to:"menu",img:"tacosimage",name:"tacos"}].map( menuItem => {
+                        [{to:"menu",img:"tacos",name:"tacos"}].map( menuItem => {
                             return <MenuItem to={menuItem.to} img={menuItem.img} name={menuItem.name} />
                         })
                     }

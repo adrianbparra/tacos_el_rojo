@@ -33,6 +33,8 @@ module.exports = {
         transform:['hover::before','hover::after'],
         rotate:['hover::before','hover::after'],
         skew:['hover::before','hover::after'],
+        filter: ['hover','group-hover'],
+        blur: ['hover','group-hover'],
        },
      },
      plugins: [
