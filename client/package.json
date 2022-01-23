@@ -45,7 +45,7 @@
     "@types/react-router": "^5.1.16",
     "@types/react-router-dom": "^5.1.8",
     "autoprefixer": "^9.8.6",
-    "postcss": "8.2.10",
+    "postcss": "8.2.13",
     "postcss-cli": "^7.1.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2",
     "tailwindcss-pseudo-elements": "^2.0.0"
